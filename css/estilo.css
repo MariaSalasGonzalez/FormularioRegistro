@@ -1,0 +1,42 @@
+
+#Genero{
+    font-family: verdana, arial !important;
+    font-size: 12px;
+}
+
+#Info{
+    font-family: verdana, arial !important;
+    font-size: 12px;
+}
+
+#Tipo-Noticia{
+    font-family: verdana, arial !important;
+    font-size: 12px;
+}
+
+table{
+    margin: 0 auto;
+} 
+
+#srb{
+    text-align:center;
+}
+
+.table {
+    width: 600px;
+    background: #24303c;
+    padding: 40px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+h1{
+    color: white;
+    font-family: 'calibri';
+    text-align: center;
+    align-items: center;
+}

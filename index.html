@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Formulario</title>
+</head>
+
+<body background="img/3.jpg">
+    <header>
+        <hgroup>
+            <h1>Formulario Registro</h1>
+        </hgroup>
+    </header>
+    <section>
+        <form name="formulario" action="" method="POST" onsubmit="return validarTodo()">
+
+            <table class="form-group table">
+                <tr>
+                    <td> <label> Nombre: </label> </td>
+                    <td> <input type="text" class="form-control" name="nombretxt" autofocus id="name" maxlength="20"
+                            required> </td>
+                </tr>
+                <tr>
+                    <td> <label> Correo Electronico: </label> </td>
+                    <td> <input type="email" class="form-control" name="email" id="correo" maxlength="20" required>
+                        <span id="errorCorreo"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> <label> Password: </label> </td>
+                    <td> <input type="password" class="form-control" name="password" id="pass" required>
+                        <span id="errorPass"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> <label> URL: </label> </td>
+                    <td> <input type="text" class="form-control" name="url" id="urL" maxlength="80" required>
+                        <span id="errorUrl"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> <label> Fecha: </label> </td>
+                    <td><input type="date" name="fecha" min="1950-01-01" max="2021-09-28" step="1" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> <label> Hora: </label> </td>
+                    <td> <input type="time" class="form-control" name="timetxt" id="time" maxlength="20" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> <label> Fecha Nacimiento: </label> </td>
+                    <td> <input type="datetime" class="form-control" name="datetxt" id="date" maxlength="20" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label> Hora de Nacimiento: </label> </td>
+                    <td><input type="time" name="hora" min="00:00" max="24:00" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> <label> Semana: </label> </td>
+                    <td> <input type="week" class="form-control" name="weektxt" id="week" maxlength="20" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="rangeinput"> Intervalo </label></td>
+                    <td><input id="rangeinput" type="range" class="form-control" min="0" max="100" value="0"
+                            onchange="rangevalue.value = value"> <output id="rangevalue" required> 0 </output>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label> Color favorito: </label> </td>
+                    <td><input type="color" class="form-control" name="color_control" id="color" onchange="getColor()">
+                      <input id="nameColor" readonly/>  
+                </td>            
+                </tr>
+                <tr>
+                    <td> <label> Genero: </label> </td>
+                    <td id="Genero">
+                        <label for="radioMasculino">
+                            <input type="radio" id="radioMasculino" name="radioGenero"> Masculino
+                        </label>
+                        <label for="radioFemenino">
+                            <input type="radio" id="radioFemenino" name="radioGenero"> Femenino
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Desea recibir información de noticias:</td>
+                    <td id="Info">
+                        <input type="radio" value="Si" id="RS" name="radioNoticia" onclick="habilitarCB()">Sí
+                        <input type="radio" value="No" id="RN" name="radioNoticia" onclick="desabilitarCB()">No
+                    </td>
+                    <br>
+                </tr>
+                <td>Tipo de Noticias:</td>
+                <td id="Tipo-Noticia">
+                    <input type="checkbox" value="comida" id="food" name="food">Comida<br>
+                    <input type="checkbox" value="videojuegos" id="games" name="games">Videojuegos<br>
+                    <input type="checkbox" value="internacional" id="internacional" name="internacional">Internacionales
+                </td>
+            </table>
+
+            <div id="srb"><br>
+                <input type="submit" value="Enviar" name="btnEnviar" class="btn btn-success">
+                <input type="reset" value="Limpiar" name="btnLimpiar" class="btn btn-">
+            </div>
+        </form>
+    </section>
+    <script src="js/validacion.js"></script>
+</body>
+
+</html>
